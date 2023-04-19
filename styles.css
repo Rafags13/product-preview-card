@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fraunces', serif;
+}
+
+html,
+body {
+    height: 100vh;
+}
+
+main {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F3EBE4;
+}
+
+.card-body {
+    display: flex;
+}
+
+.image-card {
+    width: 300px;
+    height: 400px;
+    background-image: url('./images/image-product-desktop.jpg');
+    background-size: 300px 400px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.description-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    width: 300px;
+    padding: 2em;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.product-identify {
+    color: hsl(228, 12%, 48%);
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 5px;
+}
+
+.product-name {
+    font-size: 32px;
+    line-height: 1.025em;
+}
+
+.product-description {
+    font-size: 14px;
+    color: hsl(228, 12%, 48%);
+    line-height: 1.5;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.product-with-discount {
+    font-size: 2em;
+    color: hsl(158, 36%, 37%);
+}
+
+.product-without-discount {
+    color: hsl(228, 12%, 48%);
+    font-size: 12px;
+    text-decoration: line-through;
+}
+
+.add-to-card {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: bold;
+    height: 42px;
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+    border: 0;
+    border-radius: 10px;
+}
+
+.add-to-card:hover {
+    cursor: pointer;
+}
+
+.add-to-card:active {
+    background-color: hsl(158, 34%, 15%);
+}
+
+@media screen and (max-width: 768px) {
+    .card-body {
+        flex-direction: column;
+    }
+
+    .image-card {
+        width: 300px;
+        height: 250px;
+        background-image: url('./images/image-product-mobile.jpg');
+        background-size: 300px 250px;
+        border-radius: 0;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+
+    .description-card {
+        border-radius: 0;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .product-name,
+    .product-description,
+    .price,
+    .add-to-card {
+        margin-top: 10px;
+    }
+}
